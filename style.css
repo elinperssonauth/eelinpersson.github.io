@@ -1,7 +1,7 @@
 /* Reset basics */
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #111;
     background: #fff;
   }
@@ -12,61 +12,60 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: transparent; /* no bar background */
     z-index: 1000;
-    border-bottom: 1px solid #ddd;
   }
   
   .logo a {
     text-decoration: none;
     color: #111;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
   }
   
   .menu a {
     text-decoration: none;
-    color: #111;
-    margin: 0 0.5rem;
-    font-size: 1rem;
+    color: #999; /* lighter look */
+    margin-left: 2rem;
+    font-size: 0.9rem;
   }
   
-  .menu span {
-    margin: 0 0.5rem;
-    color: #888;
+  .menu a:hover {
+    color: #111;
   }
   
   /* --- Hero Image --- */
   .hero {
-    margin-top: 100px; /* gives space under topbar */
+    margin-top: 120px; /* push below nav */
     text-align: center;
   }
   
   .hero img {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
   
-  /* --- Books List --- */
+  /* --- Books Section --- */
   .books {
-    margin: 2rem auto;
-    width: 85%;
-    max-width: 1100px;
+    margin: 5rem auto;
+    width: 80%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    overflow-y: auto;
-    padding-bottom: 3rem;
+    gap: 5rem;
   }
   
   .book {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     align-items: start;
   }
   
@@ -77,24 +76,28 @@ body {
   }
   
   .book-info h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: 2px;
     margin: 0 0 1rem;
-    letter-spacing: 1px;
+    color: #777; /* subtle, like your example */
   }
   
   .book-info p {
+    font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    color: #333;
   }
   
   .buy-btn {
     display: inline-block;
     background: #111;
     color: white;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1.4rem;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 2px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
   }
   
   .buy-btn:hover {
