@@ -1,9 +1,10 @@
 /* Reset basics */
 body {
     margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #111;
     background: #fff;
+    scroll-behavior: smooth; /* smooth scroll native */
   }
   
   /* --- Top Bar --- */
@@ -16,23 +17,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent; /* no bar background */
+    background: transparent;
     z-index: 1000;
   }
   
   .logo a {
     text-decoration: none;
     color: #111;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1rem;
     letter-spacing: 1px;
   }
   
   .menu a {
     text-decoration: none;
-    color: #999; /* lighter look */
+    color: #999;
     margin-left: 2rem;
     font-size: 0.9rem;
+    transition: color 0.3s ease;
   }
   
   .menu a:hover {
@@ -41,7 +43,7 @@ body {
   
   /* --- Hero Image --- */
   .hero {
-    margin-top: 120px; /* push below nav */
+    margin-top: 120px;
     text-align: center;
   }
   
@@ -67,6 +69,14 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
+    opacity: 0;             /* start hidden */
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .book.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .book img {
@@ -77,10 +87,10 @@ body {
   
   .book-info h2 {
     font-size: 1.2rem;
-    font-weight: normal;
+    font-weight: 400;
     letter-spacing: 2px;
     margin: 0 0 1rem;
-    color: #777; /* subtle, like your example */
+    color: #777;
   }
   
   .book-info p {
@@ -98,8 +108,25 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     letter-spacing: 1px;
+    transition: background 0.3s ease;
   }
   
   .buy-btn:hover {
     background: #444;
+  }
+  
+  /* --- Info Sections --- */
+  .info-section {
+    width: 70%;
+    margin: 6rem auto;
+    max-width: 800px;
+    text-align: left;
+  }
+  
+  .info-section h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 1rem;
   }

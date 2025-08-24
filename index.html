@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Elin Persson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -11,22 +15,22 @@
 
   <!-- Top Navigation -->
   <header class="topbar">
-    <div class="logo"><a href="index.html">ELIN PERSSON</a></div>
+    <div class="logo"><a href="#hero">ELIN PERSSON</a></div>
     <nav class="menu">
-      <a href="#">Press</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#press">Press</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Hero / Artwork -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <img src="hero.jpg" alt="Hero image">
   </section>
 
   <!-- Books Section -->
   <main class="books">
-    <div class="book">
+    <div class="book fade-in">
       <img src="awakening.jpg" alt="Awakening book cover">
       <div class="book-info">
         <h2>AWAKENING</h2>
@@ -43,9 +47,23 @@
         <a href="#" class="buy-btn">BUY</a>
       </div>
     </div>
-
-    <!-- More books here -->
   </main>
+
+  <!-- Sections -->
+  <section id="press" class="info-section">
+    <h2>Press</h2>
+    <p>Links and articles go here...</p>
+  </section>
+
+  <section id="about" class="info-section">
+    <h2>About</h2>
+    <p>Short author biography here...</p>
+  </section>
+
+  <section id="contact" class="info-section">
+    <h2>Contact</h2>
+    <p>Email, social links...</p>
+  </section>
 
 </body>
 </html>
