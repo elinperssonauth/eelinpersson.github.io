@@ -5,10 +5,10 @@ body {
     color: #111;
     background: #fff;
     scroll-behavior: smooth; /* smooth scroll native */
-  }
-  
-  /* --- Top Bar --- */
-  .topbar {
+}
+
+/* --- Top Bar --- */
+.topbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,52 +19,52 @@ body {
     align-items: center;
     background: transparent;
     z-index: 1000;
-  }
-  
-  .logo a {
+}
+
+.logo a {
     text-decoration: none;
     color: #111;
     font-weight: 600;
     font-size: 1rem;
     letter-spacing: 1px;
-  }
-  
-  .menu a {
+}
+
+.menu a {
     text-decoration: none;
     color: #999;
     margin-left: 2rem;
     font-size: 0.9rem;
     transition: color 0.3s ease;
-  }
-  
-  .menu a:hover {
+}
+
+.menu a:hover {
     color: #111;
-  }
-  
-  /* --- Hero Image --- */
-  .hero {
+}
+
+/* --- Hero Image --- */
+.hero {
     margin-top: 120px;
     text-align: center;
-  }
-  
-  .hero img {
+}
+
+.hero img {
     max-width: 70%;
     height: auto;
     display: block;
     margin: 0 auto;
-  }
-  
-  /* --- Books Section --- */
-  .books {
+}
+
+/* --- Books Section --- */
+.books {
     margin: 5rem auto;
     width: 80%;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 5rem;
-  }
-  
-  .book {
+}
+
+.book {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
@@ -72,35 +72,41 @@ body {
     opacity: 0;             /* start hidden */
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  
-  .book.visible {
+}
+
+.book.visible {
     opacity: 1;
     transform: translateY(0);
-  }
-  
-  .book img {
-    width: 100%;
+}
+
+/* Smaller book cover images */
+.book img.book-cover {
+    width: 150px;   /* smaller width */
     height: auto;
     border-radius: 4px;
-  }
-  
-  .book-info h2 {
+    transition: transform 0.3s ease;
+}
+
+.book img.book-cover:hover {
+    transform: scale(1.05);
+}
+
+.book-info h2 {
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 2px;
     margin: 0 0 1rem;
     color: #777;
-  }
-  
-  .book-info p {
+}
+
+.book-info p {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1rem;
     color: #333;
-  }
-  
-  .buy-btn {
+}
+
+.buy-btn {
     display: inline-block;
     background: #111;
     color: white;
@@ -109,24 +115,24 @@ body {
     font-size: 0.9rem;
     letter-spacing: 1px;
     transition: background 0.3s ease;
-  }
-  
-  .buy-btn:hover {
+}
+
+.buy-btn:hover {
     background: #444;
-  }
-  
-  /* --- Info Sections --- */
-  .info-section {
+}
+
+/* --- Info Sections --- */
+.info-section {
     width: 70%;
     margin: 6rem auto;
     max-width: 800px;
     text-align: left;
-  }
-  
-  .info-section h2 {
+}
+
+.info-section h2 {
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 2px;
     color: #777;
     margin-bottom: 1rem;
-  }
+}
