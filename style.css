@@ -65,7 +65,7 @@ a:hover {
 
 /* Video container to maintain 3:4 aspect ratio */
 .video-container {
-    position: right;
+    position: relative;
     width: 100%;
     padding-bottom: 80.665%; /* 4:3 aspect ratio */
     margin-bottom: 2rem;
