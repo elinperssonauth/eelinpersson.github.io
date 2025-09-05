@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     (function(){
-      emailjs.init("7DUknRybvXSPeLmN3Y"); // your EmailJS public key
+      emailjs.init("7DUknRybvXSPeLmN3"); // ✅ fixed public key
     })();
 
     function sendMail(event) {
@@ -38,6 +38,60 @@
         });
     }
   </script>
+  <style>
+    /* Center and style the contact form */
+    .contact-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 1rem;
+    }
+
+    #contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 850px;
+      width: 100%;
+    }
+
+    #contact-form label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    #message {
+      width: 800px;
+      height: 400px;
+      resize: none;
+      align-self: center;
+    }
+
+    .buy-btn {
+      align-self: flex-start;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #111;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .buy-btn:hover {
+      background: #333;
+    }
+  </style>
 </head>
 <body>
   <!-- Top Bar -->
@@ -66,7 +120,7 @@
         <input type="email" id="email" name="email" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+        <textarea id="message" name="message" required></textarea>
 
         <button type="submit" class="buy-btn">Send</button>
       </form>
