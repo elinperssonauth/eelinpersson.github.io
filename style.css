@@ -136,3 +136,18 @@ body {
     color: #777;
     margin-bottom: 1rem;
 }
+
+/* --- General Links Styling --- */
+a {
+    color: #111;           /* always black */
+    text-decoration: none; /* remove underline */
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: #111;           /* stay black after visit */
+}
+
+a:hover {
+    color: #444;           /* subtle darken on hover */
+}
