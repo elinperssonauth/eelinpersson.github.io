@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     (function(){
-      emailjs.init("7DUknRybvXSPeLmN3Y"); // replace with your EmailJS public key
+      emailjs.init("7DUknRybvXSPeLmN3Y"); // your EmailJS public key
     })();
 
     function sendMail(event) {
@@ -29,11 +29,12 @@
 
       emailjs.send("service_udz00fp", "template_h18tbrj", params)
         .then(() => {
-          alert("Tack! Ditt meddelande har skickats.");
+          alert("✅ Tack! Ditt meddelande har skickats.");
           document.getElementById("contact-form").reset();
-        }, (err) => {
-          alert("Något gick fel. Försök igen senare.");
-          console.error(err);
+        })
+        .catch((err) => {
+          alert("❌ Något gick fel. Försök igen senare.");
+          console.error("EmailJS Error:", err);
         });
     }
   </script>
@@ -43,10 +44,9 @@
   <header class="topbar">
     <div class="logo"><a href="index.html">ELIN PERSSON</a></div>
     <nav class="menu">
-      
       <a href="press.html">Press</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" style="color:#111;">Contact</a>
     </nav>
   </header>
 
@@ -57,16 +57,16 @@
 
   <!-- Contact Form -->
   <main>
-    <section class="info-section">
+    <section class="info-section contact-section">
       <form id="contact-form" onsubmit="sendMail(event)">
-        <label for="name">Your Name</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
 
-        <label for="email">Your Email</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
 
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="6" required></textarea><br><br>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
         <button type="submit" class="buy-btn">Send</button>
       </form>
