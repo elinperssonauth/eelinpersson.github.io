@@ -63,7 +63,7 @@ a:hover {
 }
 
 .hero iframe {
-    width: 100%;      /* fits the hero container width */
+    width: 1000px;      /* fits the hero container width */
     height: auto;     /* maintains natural 3:4 aspect ratio */
     border: 0;
     border-radius: 6px;
